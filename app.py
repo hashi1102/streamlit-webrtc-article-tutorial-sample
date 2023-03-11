@@ -17,7 +17,7 @@ class VideoProcessor:
 
         img = cv2.cvtColor(cv2.Canny(img, self.threshold1, self.threshold2), cv2.COLOR_GRAY2BGR)
 
-        return av.VideoFrame.from_ndarray(img, format="bgr24")
+        return cv2.imshow('',img)
 
 
 ctx = webrtc_streamer(
